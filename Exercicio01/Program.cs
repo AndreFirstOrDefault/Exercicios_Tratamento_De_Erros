@@ -11,3 +11,48 @@
     Realize o tratamento de erro para essas condições usando o bloco try-cath-finally
  
  */
+
+Console.Title = "Exercicio 03";
+//Console.Write("\nDigite uma palavra: ");
+string palavra = null;
+
+try
+{
+    
+    if (palavra == "")
+    {
+        throw new ArgumentException();
+    }
+    else if (palavra == null)
+    {
+        throw new ArgumentNullException();
+    }
+    else
+    {
+        Console.WriteLine($"\nO usuario digitou : {palavra}");
+    }
+    
+}
+catch (ArgumentNullException) 
+{
+    Console.WriteLine("\nA entrada não pode ser nula");
+}
+catch (ArgumentException) 
+{
+    Console.WriteLine("\nA entrada não pode ser vazia");
+   
+}
+catch(Exception ex)
+{
+    Console.WriteLine($"\nOcorreu um erro : {ex.Message}");
+}
+finally
+{
+    
+    Console.WriteLine($"Processo finalizado...\n");
+    
+}
+
+
+
+Console.ReadKey();
