@@ -6,7 +6,7 @@ Este repositório contém uma coleção de exercícios resolvidos que demonstram
 
 ## Índice
 
-1. [Exercício 1](Exercicios_Tratamento_De_Erros/Exercicio01.cs)
+1. [Exercício 1](./Exercicio01.cs)
 2. [Exercício 2](./Exercicio04.cs)
 
 ## Como Usar
