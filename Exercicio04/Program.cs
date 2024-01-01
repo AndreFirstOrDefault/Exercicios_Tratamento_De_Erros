@@ -14,3 +14,46 @@
     vazio.
  
  */
+
+
+
+try
+{
+    Console.Write("Digite seu nome: ");
+    string nome = Console.ReadLine();
+    Console.Write("Digite sua idade: ");
+    int idade = int.Parse(Console.ReadLine());
+    //a - tratando a idade negativa
+    if (idade < 0)
+    {
+        throw new ArgumentException();
+    }
+    //b - se a idade for 0
+    else if(idade == 0)
+    {
+        throw new NotImplementedException();
+    }
+    if(string.IsNullOrEmpty(nome))
+    {
+        throw new NullReferenceException();
+    }
+
+}
+catch (ArgumentException ex)
+{
+    Console.WriteLine($"\n{ex.GetType()} : A idade não pode ser negativa.\n");
+}
+catch (NotImplementedException ex)
+{
+    Console.WriteLine($"\n{ex.GetType()} : A idade ainda não foi definida\n");
+}
+catch (NullReferenceException ex)
+{
+    Console.WriteLine($"\n{ex.GetType()} : O nome não pode ser nulo e nem vazio\n");
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"\nOcorreu uma exceção: {ex.GetType()}");
+}
+
+Console.ReadKey();
